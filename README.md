@@ -22,9 +22,9 @@
 * Generate report: ```$ node generate-multiple-cucumber-html-reporter.js```
 
 # Refer document
-[Config for typescript](https://github.com/badeball/cypress-cucumber-preprocessor/blob/HEAD/docs/quick-start.md)
+* [Config for typescript](https://github.com/badeball/cypress-cucumber-preprocessor/blob/HEAD/docs/quick-start.md)
 [copy and paste at](https://github.com/badeball/cypress-cucumber-preprocessor/blob/16e400c498ce8f6a13704c7b1513f26b48540428/examples/webpack-ts/cypress.config.ts)
-[Config json formatter](https://github.com/cucumber/json-formatter)
+* [Config json formatter](https://github.com/cucumber/json-formatter)
 
-[cypress-cucumber-testing](https://testingbot.com/resources/articles/cypress-cucumber-testing)
-[Link on Youtube](https://www.youtube.com/watch?v=3tkAoj1YNhI)
+* [cypress-cucumber-testing](https://testingbot.com/resources/articles/cypress-cucumber-testing)
+* [Link on Youtube](https://www.youtube.com/watch?v=3tkAoj1YNhI)
