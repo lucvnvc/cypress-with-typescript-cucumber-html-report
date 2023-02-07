@@ -5,16 +5,47 @@
 * Multiple Cucumber HTML report
 
 # Steps
-* cd to path of project
-* Init repos with npm
-``` $ npm init -y```
-* Generate tsconfig.json file
-``` $ tsc --init```
-* Install dependencies
-``` $ npm i cypress typescript @badeball/cypress-cucumber-preprocessor multiple-cucumber-html-reporter```
-* Open/run cypress
-```$ npx cypress run```
-```$ npx cypress open```
+1. cd to path of project
+2. Init repos with npm
+```$ npm init -y```
+3. Generate tsconfig.json file
+```$ tsc --init```
+4. Install dependencies
+```
+$ npm i cypress typescript @badeball/cypress-cucumber-preprocessor multiple-cucumber-html-reporter
+```
+# Open/run cypress
+* Run all specs as config: `$ npx cypress run`
+* Run a simple spec on local : `npx cypress run --spec cypress/e2e/features/login.feature`
+* Run with specified browser : `npx cypress run --spec cypress/e2e/features/login.feature --browser chrome`
+* Open Test Runner: `npx cypress open`
+
+# Run parallel
+* Install: ```npm i cypress-parallel```
+* Command: ```cypress-parallel -s cy:run -t 2 -d -a '""'"```
+
+# Integrate
+## BrowserStack
+#### Install the BrowserStack CLI: ```npm i browserstack-cypress-cli```
+> Cypress CLI is a command-line tool that is used to enable communication between Cypress and BrowserStack
+
+#### Starting BrowserStack Cypress-CLI v1.5.0, you can specify the Cypress configuration file that you want to use in two ways:
+1. Mentioning the configuration file details in browserstack.json
+2. Using the --cypress-config-file CLI parameter
+```
+# Pass a relative path to the CLI
+browserstack-cypress run --sync --cypress-config-file ./cypress.config.ts
+
+# Pass an absolute path like this
+browserstack-cypress run --sync --cypress-config-file ./cypress.config.ts
+```
+#### Run with command
+* Run all: ```$ browserstack-cypress run```
+OR ```$ ./node_modules/.bin/browserstack-cypress run```
+* Run a specific file: 
+```browserstack-cypress run --sync --specs "cypress/e2e/features/login.feature"```
+
+## Jenkins
 
 # Note
 * To display the cypress folder: ```$ npx cypress open```
@@ -28,3 +59,5 @@
 
 * [cypress-cucumber-testing](https://testingbot.com/resources/articles/cypress-cucumber-testing)
 * [Link on Youtube](https://www.youtube.com/watch?v=3tkAoj1YNhI)
+* [Integrate with BrowserStack](https://www.browserstack.com/docs/automate/cypress/configuration-file)
+* [Run first test Cypress on BrowserStack](https://www.browserstack.com/docs/automate/cypress#Test_using_public_URL)
