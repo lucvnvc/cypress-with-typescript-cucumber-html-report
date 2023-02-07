@@ -1,0 +1,31 @@
+{
+  "auth": {
+    "username": "lucnguyen1",
+    "access_key": "ry6XQUciFAss3dvfNRxR"
+  },
+  "browsers": [
+    {
+      "browser": "chrome",
+      "os": "Windows 10",
+      "versions": ["latest"]
+    }
+  ],
+  "run_settings": {
+    "cypress_config_file": "./cypress.config.ts",
+    "specs": ["cypress/e2e/features/*.feature"],
+    "cypress_version": "12.2",
+    "npm_dependencies": {
+      "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+      "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+      "cypress": "^12.2.0",
+      "multiple-cucumber-html-reporter": "^3.0.1",
+      "typescript": "^4.9.4"
+    },
+    "project_name": "Cypress combined with Typescript, Cucumber preprocessor and HTML multiple report",
+    "build_name": "Build no. 1"
+  },
+  "connection_settings": {
+    "local": false
+  },
+  "disable_usage_reporting": false
+}
