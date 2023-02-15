@@ -1,6 +1,6 @@
-./output
-./.visual
-./npm_install_debug.log
-./log
-./tmpBstackPackages
+output
+.visual
+npm_install_debug.log
+log
+tmpBstackPackages
 node_modules

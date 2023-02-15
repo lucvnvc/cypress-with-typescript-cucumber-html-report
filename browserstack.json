@@ -12,8 +12,8 @@
   ],
   "run_settings": {
     "cypress_config_file": "./cypress.config.ts",
-    "specs": ["cypress/e2e/features/*.feature"],
-    "cypress_version": "12.2",
+    "specs": ["./cypress/e2e/features/*.feature"],
+    "cypress_version": "12.3",
     "npm_dependencies": {
       "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
       "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
@@ -22,7 +22,10 @@
       "typescript": "^4.9.4"
     },
     "project_name": "Cypress combined with Typescript, Cucumber preprocessor and HTML multiple report",
-    "build_name": "Build no. 1"
+    "build_name": "Build no. 1",
+    "exclude": [],
+    "parallels": "5",
+    "headless": true
   },
   "connection_settings": {
     "local": false

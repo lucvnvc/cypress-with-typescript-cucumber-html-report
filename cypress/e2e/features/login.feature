@@ -1,5 +1,6 @@
 Feature: Login
 
+    @InvalidAccount
     Scenario Outline: Verify the user login fail with an invalid account
         Given the user opens the Login page
         And the user is at "Login" page
@@ -7,18 +8,20 @@ Feature: Login
         Then the user is at "Login" page
         And the error "Login was unsuccessful. Please correct the errors and try again." is displayed
 
-    Examples:
+        Examples:
             | user                 | pass   |
             | admin@yourstore.com  | admin1 |
             | admin@yourstore.com1 | admin  |
             | admin@yourstore.com1 | admin1 |
 
+    @ValidAccount
     Scenario: Verify the user login success with a valid account
         Given the user opens the Login page
         And the user is at "Login" page
         When the user logins an account by entering a user as "admin@yourstore.com" and password as "admin"
         Then the user is at "Admin" page
 
+    @CheckFailedCase
     Scenario: Check screenshoot
         Given the user opens the Login page
         And the user is at "Login" page
