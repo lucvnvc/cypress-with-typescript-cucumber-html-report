@@ -15,6 +15,7 @@
 $ npm i cypress typescript @badeball/cypress-cucumber-preprocessor multiple-cucumber-html-reporter
 ```
 # Open/run cypress
+* Fetch dependencies first: ```$ npm install```
 * Run all specs as config: `$ npx cypress run`
 * Run a simple spec on local : `npx cypress run --spec cypress/e2e/features/login.feature`
 * Run with specified browser : `npx cypress run --spec cypress/e2e/features/login.feature --browser chrome`
