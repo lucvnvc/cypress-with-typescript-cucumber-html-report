@@ -19,7 +19,17 @@ $ npm i cypress typescript @badeball/cypress-cucumber-preprocessor multiple-cucu
 * Run all specs as config: `$ npx cypress run`
 * Run a simple spec on local : `npx cypress run --spec cypress/e2e/features/login.feature`
 * Run with specified browser : `npx cypress run --spec cypress/e2e/features/login.feature --browser chrome`
+* Run with tags in cucumber
 * Open Test Runner: `npx cypress open`
+
+# Run with tags of cucumber
+1. Set config in .cypress-cucumber-preprocessor
+
+```
+"filterSpecs": true,
+"omitFiltered": true
+```
+2. Run command: `npx cypress run --e2e --browser chrome --env tags="@ValidAccount"`
 
 # Run parallel
 * Install: ```npm i cypress-parallel```
