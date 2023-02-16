@@ -7,10 +7,10 @@ report.generate({
   durationInMS: true,
   metadata: {
     browser: {
-      name: 'chrome',
-      version: '109',
+      name: "chrome",
+      version: "109",
     },
-    device: "Local test machine",
+    device: "Cypress",
     platform: {
       name: "osx",
       version: "12.6",
