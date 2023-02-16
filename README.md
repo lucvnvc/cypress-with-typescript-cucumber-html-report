@@ -71,6 +71,17 @@ OR ```$ ./node_modules/.bin/browserstack-cypress run```
 * To display the cypress folder: ```$ npx cypress open```
 * Rename cypress.config.js to cypress.config.ts
 * Generate report: ```$ node generate-multiple-cucumber-html-reporter.js```
+* Resolve broken CSS on HTML report when running with Jenkins
+Steps:
+```
+1. Manage Jenkins
+2. Manage Nodes
+3. Setting ( gear icon)
+4. Consolo
+5. Fill: System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "")
+6. Click Run button
+7. Re-build
+```
 
 # Refer document
 * [Config for typescript](https://github.com/badeball/cypress-cucumber-preprocessor/blob/HEAD/docs/quick-start.md)
