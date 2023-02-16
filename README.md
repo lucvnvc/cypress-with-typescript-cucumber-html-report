@@ -29,7 +29,16 @@ $ npm i cypress typescript @badeball/cypress-cucumber-preprocessor multiple-cucu
 "filterSpecs": true,
 "omitFiltered": true
 ```
-2. Run command: `npx cypress run --e2e --browser chrome --env tags="@ValidAccount"`
+2. Run command: 
+
+* Run positive:
+```
+npx cypress run --e2e --browser chrome --env tags="@ValidAccount"
+```
+* Run negative:
+```
+npx cypress run --e2e --browser chrome --env tags="not @CheckFailedCase" --headless
+```
 
 # Run parallel
 * Install: ```npm i cypress-parallel```
