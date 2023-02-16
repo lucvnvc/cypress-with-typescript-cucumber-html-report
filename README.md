@@ -66,12 +66,14 @@ OR ```$ ./node_modules/.bin/browserstack-cypress run```
 ```browserstack-cypress run --sync --specs "cypress/e2e/features/login.feature"```
 
 ## Jenkins
+* Refer script in Jenkinfile
 
 # Note
 * To display the cypress folder: ```$ npx cypress open```
 * Rename cypress.config.js to cypress.config.ts
 * Generate report: ```$ node generate-multiple-cucumber-html-reporter.js```
 * Resolve broken CSS on HTML report when running with Jenkins
+
 Steps:
 ```
 1. Manage Jenkins
