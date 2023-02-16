@@ -6,7 +6,7 @@
   "scripts": {
     "remove-output": "rm -rf ./output/* || true",
     "open": "cypress open",
-    "test": "cypress run --browser chrome --headed --env tags=\"@ValidAccount\"",
+    "test": "cypress run --browser chrome --headless --env tags=\"@ValidAccount\"",
     "generate-report": "node generate-multiple-cucumber-html-reporter.js",
     "run-generate-report": "node_modules/.bin/yarn remove-output && node_modules/.bin/yarn test && node_modules/.bin/yarn generate-report"
   },
@@ -14,13 +14,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
-    "browserstack-cypress-cli": "^1.19.3",
-    "cypress": "^12.2.0",
-    "multiple-cucumber-html-reporter": "^3.0.1",
-    "npm": "^9.4.1",
-    "typescript": "^4.9.4",
-    "yarn": "^1.22.19"
+    "@badeball/cypress-cucumber-preprocessor": "15.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "2.1.5",
+    "browserstack-cypress-cli": "1.19.3",
+    "cypress": "12.2.0",
+    "multiple-cucumber-html-reporter": "3.0.1",
+    "npm": "9.4.1",
+    "typescript": "4.9.4",
+    "yarn": "1.22.19"
   }
 }
