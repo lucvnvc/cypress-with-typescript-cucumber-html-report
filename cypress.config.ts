@@ -32,6 +32,10 @@ export default defineConfig({
     execTimeout: 10000,
     specPattern: "**/*.feature",
     supportFile: false,
+    retries: {
+      runMode: 2,
+      openMode: 0,
+    },
     "env": {
       "qc": "https://web-ninjamart-qa-bo.apac.positivethinking.tech/",
       "uat": "https://web-ninjamart-qa-bo.apac.positivethinking.tech/",
