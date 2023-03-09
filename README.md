@@ -85,6 +85,21 @@ Steps:
 7. Re-build
 ```
 
+# Mot so command can nho
+```
+1. then()
+- Kiểu trả về dựa vào kiểu trả về của command trước đó
+- Chỉ thực hiện khi command trước đó thực hiện xong
+ex: cy.get('locator').then($locator => {$locator.click()})
+
+2. wrap()
+- Chuyển đổi variable để sử dụng cypress command
+ex: cy.wrap($variable).type()
+3. as()
+- lưu giá trị vào một biến global
+ex: cy.wrap($abc).as('abc')
+```
+
 # Refer document
 * [Config for typescript](https://github.com/badeball/cypress-cucumber-preprocessor/blob/HEAD/docs/quick-start.md)
 [copy and paste at](https://github.com/badeball/cypress-cucumber-preprocessor/blob/16e400c498ce8f6a13704c7b1513f26b48540428/examples/webpack-ts/cypress.config.ts)
