@@ -1,9 +1,9 @@
 class AdminPage {
-	elements = {};
+  elements = {};
 
-	getCurrentUrl() {
-		return cy.url();
-	}
+  getCurrentUrl() {
+    return cy.url();
+  }
 }
 
 export default AdminPage;
