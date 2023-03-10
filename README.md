@@ -40,6 +40,12 @@ npx cypress run --e2e --browser chrome --env tags="@ValidAccount"
 npx cypress run --e2e --browser chrome --env tags="not @CheckFailedCase" --headless
 ```
 
+# Run with WebKit (browser engine of Safari)
+
+1. Add ```experimentalWebKitSupport: true``` to config file
+2. Install playwright-webkit package ```yarn add -D playwright-webkit```
+3. Run it as others
+
 # Run parallel
 * Install: ```npm i cypress-parallel```
 * Command: ```cypress-parallel -s cy:run -t 2 -d -a '""'"```

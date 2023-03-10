@@ -32,6 +32,8 @@ export default defineConfig({
     execTimeout: 10000,
     specPattern: "**/*.feature",
     supportFile: false,
+    experimentalWebKitSupport: true,
+
     retries: {
       runMode: 2,
       openMode: 0,
