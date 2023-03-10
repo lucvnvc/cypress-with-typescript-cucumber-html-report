@@ -1,19 +1,19 @@
 {
-	"compilerOptions": {
-		"baseUrl": "../node_modules",
-		"module": "commonjs",
-		"lib": ["dom", "ES6"],
-		"noImplicitAny": true,
-		"noImplicitThis": true,
-		"strictNullChecks": true,
-		"strictFunctionTypes": true,
-		"noUnusedLocals": false,
-		"noUnusedParameters": false,
-		"types": ["cypress", "node"],
-		"noEmit": true,
-		"forceConsistentCasingInFileNames": true,
-		"esModuleInterop": true,
-		"target": "ES6"
-	},
-	"include": ["**/*.ts", "**/*.js"]
+  "compilerOptions": {
+    "baseUrl": "../node_modules",
+    "module": "commonjs",
+    "lib": ["dom", "es6"],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "types": [],
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "target": "ES6"
+  },
+  "include": ["**/*.ts", "**/*.js"]
 }
