@@ -1,10 +1,10 @@
 class LoginPage {
   elements = {
-    inputUser: () => cy.get("#Email"),
-    inputPass: () => cy.get("#Password"),
+    inputUser: () => cy.get('#Email'),
+    inputPass: () => cy.get('#Password'),
     btnLogin: () => cy.get("button[class*='login-button']"),
     lbError: () => cy.get("div[class*='message-error']"),
-    btnLogout: () => cy.get("#books-wrapper > .text-right > #submit"),
+    btnLogout: () => cy.get('#books-wrapper > .text-right > #submit'),
   };
 
   navigate() {
@@ -16,15 +16,11 @@ class LoginPage {
   }
 
   setUser(user: string) {
-    this.elements.inputUser()
-    .clear()
-    .type(user);
+    this.elements.inputUser().clear().type(user);
   }
 
   setPass(pass: string) {
-    this.elements.inputPass()
-    .clear()
-    .type(pass);
+    this.elements.inputPass().clear().type(pass);
   }
 
   clickOnLogin() {
