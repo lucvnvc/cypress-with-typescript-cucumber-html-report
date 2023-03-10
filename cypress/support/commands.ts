@@ -35,14 +35,3 @@
 //     }
 //   }
 // }
-
-Cypress.Commands.add('getText',
-  {
-    prevSubject: 'element',
-  }, ($element) => {
-    cy.wrap($element).scrollIntoView();
-    cy.wrap($element).then((actualText) => {
-      return actualText.text().trim()
-    });
-  }
-);
