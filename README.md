@@ -84,6 +84,7 @@ OR ```$ ./node_modules/.bin/browserstack-cypress run```
 
 ## Jenkins
 * Refer script in Jenkinfile
+* Some common plugins: ```Parameterize Trigger, Conditional BuildStep```
 
 # Note
 * To display the cypress folder: ```$ npx cypress open```
