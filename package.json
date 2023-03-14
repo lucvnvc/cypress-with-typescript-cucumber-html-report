@@ -9,7 +9,7 @@
     "test": "cypress run --browser chrome --headless --env tags=\"not @CheckFailedCase\"",
     "generate-report": "node generate-multiple-cucumber-html-reporter.js",
     "run-generate-report": "yarn remove-output && yarn test && yarn generate-report",
-    "test:cy2": "cy2 run --e2e --browser chrome --env tags=\"not @CheckFailedCase\" --headless",
+    "test:cy2": "cy2 run --e2e --env tags=\"not @CheckFailedCase\" --headless",
     "test:parallel": "CYPRESS_API_URL=http://localhost:1234 yarn test:cy2 --parallel --record --key somekey"
   },
   "keywords": [],
@@ -19,7 +19,7 @@
     "@badeball/cypress-cucumber-preprocessor": "15.0.0",
     "@bahmutov/cypress-esbuild-preprocessor": "2.1.5",
     "browserstack-cypress-cli": "1.19.3",
-    "cy2": "^4.0.6",
+    "cy2": "4.0.6",
     "cypress": "12.2.0",
     "multiple-cucumber-html-reporter": "3.0.1",
     "npm": "9.4.1",
