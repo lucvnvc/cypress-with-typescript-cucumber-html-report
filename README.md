@@ -46,9 +46,20 @@ npx cypress run --e2e --browser chrome --env tags="not @CheckFailedCase" --headl
 2. Install playwright-webkit package ```yarn add -D playwright-webkit```
 3. Run it as others
 
+# Cypress Dashboard via sorry-cypress
+
+```
+Step #1. Start Docker engine on local
+Step #2. Run: docker compose -f docker-compose.minio.yml up
+Step #3: Open browser to access Dashboard: localhost:8080
+Step #4: Create a projectId
+Step #5: Update projectId field in Config file (cypress.config.ts)
+```
+
 # Run parallel
-* Install: ```npm i cypress-parallel```
-* Command: ```cypress-parallel -s cy:run -t 2 -d -a '""'"```
+* Install: ```npm i cy2```
+* Command run with cy2: ```cy2 run --e2e --env tags=\"not @CheckFailedCase\" --browser chrome --headless```
+* Parallel: ```CYPRESS_API_URL=http://localhost:1234 yarn test:cy2 --parallel --record --key somekey --ci-build-id="<buildNumber>"```
 
 # Integrate
 ## BrowserStack
