@@ -1,7 +1,7 @@
-import { defineConfig } from "cypress";
-import createBundler from "@bahmutov/cypress-esbuild-preprocessor";
-import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-preprocessor";
-import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild";
+import { defineConfig } from 'cypress';
+import createBundler from '@bahmutov/cypress-esbuild-preprocessor';
+import { addCucumberPreprocessorPlugin } from '@badeball/cypress-cucumber-preprocessor';
+import createEsbuildPlugin from '@badeball/cypress-cucumber-preprocessor/esbuild';
 
 async function setupNodeEvents(
   on: Cypress.PluginEvents,
@@ -11,7 +11,7 @@ async function setupNodeEvents(
   await addCucumberPreprocessorPlugin(on, config);
 
   on(
-    "file:preprocessor",
+    'file:preprocessor',
     createBundler({
       plugins: [createEsbuildPlugin(config)],
     })
@@ -23,14 +23,14 @@ async function setupNodeEvents(
 
 export default defineConfig({
   e2e: {
-    baseUrl: "https://admin-demo.nopcommerce.com",
+    baseUrl: 'https://admin-demo.nopcommerce.com',
     defaultCommandTimeout: 5000,
     video: false,
-    videosFolder: "./output/videos",
-    screenshotsFolder: "./output/screenshots",
+    videosFolder: './output/videos',
+    screenshotsFolder: './output/screenshots',
     pageLoadTimeout: 15000,
     execTimeout: 10000,
-    specPattern: "**/*.feature",
+    specPattern: '**/*.feature',
     supportFile: false,
     experimentalWebKitSupport: true,
 
@@ -38,10 +38,11 @@ export default defineConfig({
       runMode: 2,
       openMode: 0,
     },
-    "env": {
-      "qc": "https://web-ninjamart-qa-bo.apac.positivethinking.tech/",
-      "uat": "https://web-ninjamart-qa-bo.apac.positivethinking.tech/",
+    env: {
+      qc: 'https://web-ninjamart-qa-bo.apac.positivethinking.tech/',
+      uat: 'https://web-ninjamart-qa-bo.apac.positivethinking.tech/',
     },
     setupNodeEvents,
+    projectId: 'poc-cypress',
   },
 });
