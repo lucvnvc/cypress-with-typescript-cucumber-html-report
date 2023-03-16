@@ -6,7 +6,7 @@
   "scripts": {
     "remove-output": "rm -rf ./output/* || true",
     "open": "cypress open",
-    "test": "cypress run --browser chrome --headless --env tags=\"not @CheckFailedCase\"",
+    "test": "cypress run --browser electron --headless --env tags=\"not @CheckFailedCase\"",
     "generate-report": "node generate-multiple-cucumber-html-reporter.js",
     "run-generate-report": "yarn remove-output && yarn test && yarn generate-report",
     "test:cy2": "cy2 run --e2e --env tags=\"not @CheckFailedCase\" --headless",
@@ -27,6 +27,7 @@
     "yarn": "1.22.19"
   },
   "devDependencies": {
-    "playwright-webkit": "1.31.2"
+    "playwright-webkit": "1.31.2",
+    "prettier": "^2.8.4"
   }
 }
