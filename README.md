@@ -118,6 +118,23 @@ ex: cy.wrap($variable).type()
 ex: cy.wrap($abc).as('abc')
 ```
 
+# Docker
+
+1. Create Dockerfile in the root folder
+2. Create .dockerignore file
+3. Run
+
+```
+Step 1: Start docker in your local
+Step 2: Run with command "docker build -t cypress ."
+```
+## Run with docker-compose
+
+```
+Step 1: Create docker-compose.yml file
+Step 2: Run with command "docker-compose up"
+```
+
 # Refer document
 * [Config for typescript](https://github.com/badeball/cypress-cucumber-preprocessor/blob/HEAD/docs/quick-start.md)
 [copy and paste at](https://github.com/badeball/cypress-cucumber-preprocessor/blob/16e400c498ce8f6a13704c7b1513f26b48540428/examples/webpack-ts/cypress.config.ts)
