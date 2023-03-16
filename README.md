@@ -120,7 +120,7 @@ ex: cy.wrap($abc).as('abc')
 
 # Docker
 
-1. Create Dockerfile in the root folder
+1. Create Dockerfile in the root folder with configuration - refer [docker-image-version](https://github.com/cypress-io/cypress-docker-images/tree/master/base)
 2. Create .dockerignore file
 3. Run
 
@@ -139,8 +139,8 @@ Step 2: Run with command "docker-compose up"
 * [Config for typescript](https://github.com/badeball/cypress-cucumber-preprocessor/blob/HEAD/docs/quick-start.md)
 [copy and paste at](https://github.com/badeball/cypress-cucumber-preprocessor/blob/16e400c498ce8f6a13704c7b1513f26b48540428/examples/webpack-ts/cypress.config.ts)
 * [Config json formatter](https://github.com/cucumber/json-formatter)
-
 * [cypress-cucumber-testing](https://testingbot.com/resources/articles/cypress-cucumber-testing)
 * [Link on Youtube](https://www.youtube.com/watch?v=3tkAoj1YNhI)
 * [Integrate with BrowserStack](https://www.browserstack.com/docs/automate/cypress/configuration-file)
 * [Run first test Cypress on BrowserStack](https://www.browserstack.com/docs/automate/cypress#Test_using_public_URL)
+* [Udemy course](Cypress: Web Automation Testing from Zero to Hero)
