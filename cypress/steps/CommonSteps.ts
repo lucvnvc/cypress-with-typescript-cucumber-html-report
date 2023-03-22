@@ -1,9 +1,6 @@
 import { Given } from '@badeball/cypress-cucumber-preprocessor';
-import AdminPage from '../pages/AdminPage';
-import LoginPage from '../pages/LoginPage';
-
-const loginPage = new LoginPage();
-const adminPage = new AdminPage();
+import adminPage from '../page-objects/AdminPage';
+import loginPage from '../page-objects/LoginPage';
 
 Given('the user opens the Login page', () => {
   loginPage.navigate();
@@ -12,7 +9,7 @@ Given('the user opens the Login page', () => {
 Given('the user is at {string} page', (page: string) => {
   switch (page) {
     case 'Login':
-      loginPage.isAt().should('be.visible');
+      loginPage.elements.btnLogin().should('be.visible');
       break;
     case 'Admin':
       adminPage.getCurrentUrl().should('contain', '/admin');

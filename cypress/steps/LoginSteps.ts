@@ -1,7 +1,5 @@
 import { When } from '@badeball/cypress-cucumber-preprocessor';
-import LoginPage from '../pages/LoginPage';
-
-const loginPage = new LoginPage();
+import loginPage from '../page-objects/LoginPage';
 
 When(
   'the user logins an account by entering a user as {string} and password as {string}',
@@ -11,5 +9,5 @@ When(
 );
 
 When('the error {string} is displayed', (error: string) => {
-  loginPage.getError().should('contain', error);
+  loginPage.elements.lbError().should('contain', error);
 });

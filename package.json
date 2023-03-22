@@ -6,7 +6,7 @@
   "scripts": {
     "remove-output": "rm -rf ./output/* || true",
     "open": "cypress open",
-    "test": "cypress run --browser electron --headless --env tags=\"not @CheckFailedCase\"",
+    "test": "yarn remove-output && cypress run --browser chrome --headed --env tags=\"not @CheckFailedCase\"",
     "generate-report": "node generate-multiple-cucumber-html-reporter.js",
     "run-generate-report": "yarn remove-output && yarn test && yarn generate-report",
     "test:cy2": "cy2 run --e2e --env tags=\"not @CheckFailedCase\" --headless",
