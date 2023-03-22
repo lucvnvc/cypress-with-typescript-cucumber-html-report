@@ -6,4 +6,4 @@ class AdminPage {
   }
 }
 
-export default AdminPage;
+export default new AdminPage();

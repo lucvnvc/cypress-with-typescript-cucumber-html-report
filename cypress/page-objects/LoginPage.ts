@@ -11,10 +11,6 @@ class LoginPage {
     cy.visit('/login');
   }
 
-  isAt() {
-    return this.elements.btnLogin();
-  }
-
   setUser(user: string) {
     this.elements.inputUser().clear().type(user);
   }
@@ -32,10 +28,6 @@ class LoginPage {
     this.setPass(pass);
     this.clickOnLogin();
   }
-
-  getError() {
-    return this.elements.lbError();
-  }
 }
 
-export default LoginPage;
+export default new LoginPage();
