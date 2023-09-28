@@ -13,7 +13,7 @@ pipeline {
         }
         stage('E2E Tests') {
             steps {
-                git 'https://github.com/lucvnvc/poc_typescript_cypress_cucumber_html_report.git'
+                git 'https://github.com/lucvnvc/cypress-with-typescript-cucumber-html-report.git'
 
                 // Run
                 sh 'yarn remove-output'
