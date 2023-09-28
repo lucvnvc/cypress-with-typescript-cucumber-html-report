@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Load dependencies') {
             steps {
-                sh 'yarn'
+                sh 'npm install'
             }
         }
         stage('E2E Tests') {
